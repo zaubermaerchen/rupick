@@ -1,0 +1,8 @@
+[package]
+name = "rupick"
+version = "0.1.0"
+authors = ["Mutsuki Kimuraya <sondessein@gmail.com>"]
+
+[dependencies]
+rand = "0.3"
+argparse = "0.2"
