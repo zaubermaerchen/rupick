@@ -9,16 +9,16 @@ use rand::{thread_rng, Rng};
 use argparse::{ArgumentParser, Store, StoreTrue};
 
 fn main() {
-	let mut filepath: String = String::new();
+    let mut filepath: String = String::new();
     let mut n: usize = 1;
     let mut deny_duplicates: bool = false;
-	{
-		let mut parser = ArgumentParser::new();
-		parser.refer(&mut n).add_option(&["-n"], Store, "number of choice");
-		parser.refer(&mut deny_duplicates).add_option(&["-d"], StoreTrue, "deny duplicates");
+    {
+        let mut parser = ArgumentParser::new();
+        parser.refer(&mut n).add_option(&["-n"], Store, "number of choice");
+        parser.refer(&mut deny_duplicates).add_option(&["-d"], StoreTrue, "deny duplicates");
         parser.refer(&mut filepath).add_argument("file", Store, "source filepath");
-		parser.parse_args_or_exit();
-	}
+        parser.parse_args_or_exit();
+    }
 
     let items = match if filepath.len() > 0 { read_from_file(filepath.as_str()) } 
                         else { read_from_stdin() } {
@@ -47,8 +47,8 @@ fn read_from_stdin() -> io::Result<Vec<String>> {
 }
 
 fn read_from_file(filepath: &str) -> io::Result<Vec<String>> {
-	let path = Path::new(filepath);
-	let file = File::open(&path)?;
+    let path = Path::new(filepath);
+    let file = File::open(&path)?;
     let mut reader = BufReader::new(file);
 
     let mut items : Vec<String> = Vec::new();
