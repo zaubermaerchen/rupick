@@ -6,12 +6,12 @@ random pickup tool from stdin/file
     rupick [OPTIONS] [file]
 
 ### positional arguments:
-|argument|ddescription|
+|argument|description|
 |---|---|
 |*file*|source filepath|
 
 ### optional arguments:
-|argument|ddescription|
+|argument|description|
 |---|---|
 |-h,--help|show this help message and exit|
 |-n *N*|number of choice(default *N*=1)|
