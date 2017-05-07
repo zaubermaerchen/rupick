@@ -12,8 +12,8 @@ fn main() {
     let mut n: u32 = 1;
 	{
 		let mut parser = ArgumentParser::new();
-		parser.refer(&mut n).add_option(&["-n"], Store, "Number of choice");
-        parser.refer(&mut filepath).add_argument("file", Store, "Filepath");
+		parser.refer(&mut n).add_option(&["-n"], Store, "number of choice");
+        parser.refer(&mut filepath).add_argument("file", Store, "source filepath");
 		parser.parse_args_or_exit();
 	}
 
